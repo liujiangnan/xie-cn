@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title><%=title %></title>  
+    <script type="text/javascript" src="/lib/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/lib/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <%if(header){%>
+    <%- include(header) %>
+    <%}%>
+</head> 
+<body style="position: absolute;top:0px;left: 0px;right: 0px;bottom: 0px;margin:0px;">
+    <%include waiting %>
+    <div id="divAll" style="position: absolute;top:0px;left: 0px;right: 0px;bottom: 0px;"></div>
+</body>
+
+<script src="/socket.io/socket.io.js"></script> 
+<script type="text/javascript" src="/skyframe/lib/netclient.js"></script>
+<script type="text/javascript" src="/skyframe/lib/skyframe.js"></script>
+
+<script> 
+
+    var net; 
+    var engine = '<%=engine %>';
+    $(function(){
+        ShowWaitting(true);
+        <%if(token){%>
+        net = NetClient('<%=host %>','<%=server %>','<%=token %>',function(){
+            net.getView('<%=method %>', '<%-params %>',function(result,parms){
+                ShowWaitting(false);
+                $("#divAll").html(result);
+            });
+        });
+        <%}else{%>
+        net = NetClientNoneIO('<%=server %>');
+        net.getView('<%=method %>', '<%-params %>',function(result,parms){
+            ShowWaitting(false);
+            $("#divAll").html(result);
+        });
+        <%}%>
+    });
+
+</script>
+</html> 

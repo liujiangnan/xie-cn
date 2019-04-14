@@ -1,0 +1,66 @@
+{
+  "_from": "xie-cn",
+  "_id": "xie-cn@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-56Ry3Jhm6AZDGmEX3whV0+Koiv2LzyUsD61VNXvxiLkC6WAPT5RZ+27M6lzu58j/+GDYjyhcTJUWS6qkUNvFUg==",
+  "_location": "/xie-cn",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "xie-cn",
+    "name": "xie-cn",
+    "escapedName": "xie-cn",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/xie-cn/-/xie-cn-1.0.3.tgz",
+  "_shasum": "0698ada33a85e8cf1bd1b7ba010337e534740b78",
+  "_spec": "xie-cn",
+  "_where": "/Users/zhy/iot/x-home",
+  "author": {
+    "name": "nan"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "debug": "^2.6.3",
+    "ejs": "^2.5.6",
+    "koa": "^2.2.0",
+    "koa-body": "^2.5.0",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "0.0.16",
+    "koa-generic-session": "^1.11.5",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^3.2.1",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.0.1",
+    "koa-send": "^4.1.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "node-uuid": "^1.4.8",
+    "object-keys": "^1.0.11",
+    "socket.io": "^1.7.3",
+    "socketio-jwt": "^4.5.0"
+  },
+  "deprecated": false,
+  "description": "贤主之用人也，犹巧工之制木也，大者以为舟航、柱梁，小者以为楫、楔。",
+  "keywords": [
+    "xie",
+    "xie-cn",
+    "iot",
+    "lifekit"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "xie-cn",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.6"
+}
